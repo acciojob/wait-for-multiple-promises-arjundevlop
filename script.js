@@ -34,34 +34,35 @@ const promise3 = new Promise((resolve,reject)=>{
     const tablehead = document.getElementById("thead");
     const loadRow = document.querySelector(".loadingRow");
     tablehead.removeChild(loadRow);
+	 const body = document.getElementById("output");
 
     let newRow = document.createElement("tr");
     let row1c1 = newRow.insertCell(0);
     row1c1.innerText = "Promise 1";
     let row1c2 = newRow.insertCell(1);
     row1c2.innerText = promise1Time;
-    tablehead.appendChild(newRow);
+    body.appendChild(newRow);
 
     let newSecondRow = document.createElement("tr");
     let row2c1 = newSecondRow.insertCell(0);
     row2c1.innerText = "Promise 2";
     let row2c2 = newSecondRow.insertCell(1);
     row2c2.innerText = promise2Time;
-    tablehead.appendChild(newSecondRow);
+    body.appendChild(newSecondRow);
 
     let newThirdRow = document.createElement("tr");
     let row3c1 = newThirdRow.insertCell(0);
     row3c1.innerText = "Promise 3";
     let row3c2 = newThirdRow.insertCell(1);
     row3c2.innerText = promise3Time;
-    tablehead.appendChild(newThirdRow);
+    body.appendChild(newThirdRow);
 
     let fourthRow = document.createElement("tr");
     let row4c1 = fourthRow.insertCell(0);
     row4c1.innerText = "Total";
     let row4c2 = fourthRow.insertCell(1);
     row4c2.innerText = (promise1Time+promise2Time+promise3Time).toFixed(3);
-    tablehead.appendChild(fourthRow);
+    body.appendChild(fourthRow);
 
  })
 //console.log(promArr);
